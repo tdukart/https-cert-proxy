@@ -1,6 +1,6 @@
 {
   "name": "https-cert-proxy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Creates a simple HTTPS-to-HTTP proxy for local development, using provided certificate files.",
   "bin": "src/index.js",
   "main": "src/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url" : "https://github.com/tdukart/https-cert-proxy.git"
+    "url": "https://github.com/tdukart/https-cert-proxy.git"
   },
   "keywords": [],
   "author": "Todd Dukart <tdukart@mechninja.com>",
