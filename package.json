@@ -8,6 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"src/**\""
   },
+  "repository": {
+    "type": "git",
+    "url" : "https://github.com/tdukart/https-cert-proxy.git"
+  },
   "keywords": [],
   "author": "Todd Dukart <tdukart@mechninja.com>",
   "license": "BSD-3-Clause",
