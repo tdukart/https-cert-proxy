@@ -72,7 +72,7 @@ const parsedOptions = checkOptions();
 if (!parsedOptions) {
   console.log(usage);
 } else {
-  createProxy(parsedOptions).then((proxy) => {
+  createProxy(parsedOptions).then(() => {
     console.log('Proxy server started at https://localhost:' + parsedOptions.destination);
   });
 }

@@ -6,16 +6,20 @@ const createProxy = ({
   destination,
   cert,
   key,
-}) => httpProxy.createServer({
-  target: {
-    host: 'localhost',
-    port: source,
-  },
-  ws: true,
-  ssl: {
-    key: fs.readFileSync(key),
-    cert: fs.readFileSync(cert),
-  },
-}).listen(destination);
+}) => new Promise((resolve) => {
+  httpProxy.createServer({
+    target: {
+      host: 'localhost',
+      port: source,
+    },
+    ws: true,
+    ssl: {
+      key: fs.readFileSync(key),
+      cert: fs.readFileSync(cert),
+    },
+  }).listen(destination);
+
+  resolve();
+})
 
 module.exports = createProxy;
