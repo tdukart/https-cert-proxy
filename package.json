@@ -1,6 +1,6 @@
 {
   "name": "https-cert-proxy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Creates a simple HTTPS-to-HTTP proxy for local development, using provided certificate files.",
   "bin": "src/index.js",
   "main": "src/index.js",
