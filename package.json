@@ -1,0 +1,25 @@
+{
+  "name": "https-cert-proxy",
+  "version": "0.0.1",
+  "description": "Creates a simple HTTPS-to-HTTP proxy for local development, using provided certificate files.",
+  "bin": "src/index.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"src/**\""
+  },
+  "keywords": [],
+  "author": "Todd Dukart <tdukart@mechninja.com>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.1.0",
+    "http-proxy": "^1.18.0",
+    "lodash.isempty": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}
