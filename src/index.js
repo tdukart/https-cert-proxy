@@ -48,6 +48,10 @@ const usage = commandLineUsage([
     header: 'Options',
     optionList: optionDefinitions,
   },
+  {
+    header: 'Usage Instructions',
+    content: 'For full usage instructions, visit {underline https://npm.im/https-cert-proxy}.'
+  }
 ]);
 
 const checkOptions = () => {
