@@ -9,14 +9,14 @@ const optionDefinitions = [
     name: 'source',
     alias: 's',
     type: Number,
-    default: 3000,
+    defaultValue: 3000,
     description: 'The port your local project is listening on. For Node development, this is likely 3000.',
   },
   {
     name: 'destination',
     alias: 'd',
     type: Number,
-    default: 8030,
+    defaultValue: 8030,
     description: 'The port to proxy from.',
   },
   {
