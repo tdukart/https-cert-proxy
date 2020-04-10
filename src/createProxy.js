@@ -20,6 +20,6 @@ const createProxy = ({
   }).listen(destination);
 
   resolve();
-})
+});
 
 module.exports = createProxy;
