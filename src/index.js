@@ -50,8 +50,8 @@ const usage = commandLineUsage([
   },
   {
     header: 'Usage Instructions',
-    content: 'For full usage instructions, visit {underline https://npm.im/https-cert-proxy}.'
-  }
+    content: 'For full usage instructions, visit {underline https://npm.im/https-cert-proxy}.',
+  },
 ]);
 
 const checkOptions = () => {
@@ -77,6 +77,6 @@ if (!parsedOptions) {
   console.log(usage);
 } else {
   createProxy(parsedOptions).then(() => {
-    console.log('Proxy server started at https://localhost:' + parsedOptions.destination);
+    console.log(`Proxy server started at https://localhost:${parsedOptions.destination}`);
   });
 }
