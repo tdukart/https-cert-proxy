@@ -32,6 +32,12 @@ In parallel with your development environment, run this as follows:
 npx https-cert-proxy --cert path/to/localhost.pem --key path/to/localhost-key.pem
 ```
 
+By default, this will proxy your existing `http://localhost:3000` to `https://localhost:8030`. These ports can be configured using flags. For example, this will proxy from 80 (the default HTTP port) to 443 (the default HTTPS port):
+
+```shell script
+npx https-cert-proxy --cert path/to/localhost.pem --key path/to/localhost-key.pem --source 80 --destination 443
+```
+
 I find it easiest to have these scripts in my `package.json`, using the package `concurrently`:
 
 ```json
