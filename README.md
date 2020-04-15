@@ -18,7 +18,8 @@ The `mkcert` package, available on Homebrew, is very easy to use.
    directory in your project.
 4. Run `mkcert localhost`.
 5. Ensure that the two generated files, `localhost.pem` and `localhost-key.pem`, are ignored in your
-   source control.
+   source control. They would only be trusted on your local machine, so other users would run into
+   errors.
 
 ### Other Operating Systems
 
@@ -32,7 +33,9 @@ In parallel with your development environment, run this as follows:
 npx https-cert-proxy --cert path/to/localhost.pem --key path/to/localhost-key.pem
 ```
 
-By default, this will proxy your existing `http://localhost:3000` to `https://localhost:8030`. These ports can be configured using flags. For example, this will proxy from 80 (the default HTTP port) to 443 (the default HTTPS port):
+By default, this will proxy your existing `http://localhost:3000` to `https://localhost:8030`. These
+ports can be configured using flags. For example, this will proxy from 80 (the default HTTP port) to
+443 (the default HTTPS port):
 
 ```shell script
 npx https-cert-proxy --cert path/to/localhost.pem --key path/to/localhost-key.pem --source 80 --destination 443
