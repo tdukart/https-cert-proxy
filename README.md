@@ -29,7 +29,7 @@ Contributions welcome!
 In parallel with your development environment, run this as follows:
 
 ```shell script
-https-cert-proxy --cert path/to/localhost.pem --key path/to/localhost-key.pem
+npx https-cert-proxy --cert path/to/localhost.pem --key path/to/localhost-key.pem
 ```
 
 I find it easiest to have these scripts in my `package.json`, using the package `concurrently`:
