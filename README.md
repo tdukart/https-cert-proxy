@@ -26,6 +26,12 @@ The `mkcert` package, available on Homebrew, is very easy to use.
 
 Contributions welcome!
 
+## Alternative Hostnames
+It may be useful to use an alternative hostname for your project. For example, if you need to use
+cookies, you may wish to serve from `localhost.YOURDOMAIN.com`. To do so, you'll need to make sure
+the alternative hostname is in your `/etc/hosts` file (or equivalent). In step 5 above, replace
+`localhost` with your full domain, i.e. `mkcert localhost.YOURDOMAIN.com`.
+
 ## Usage
 
 In parallel with your development environment, run this as follows:

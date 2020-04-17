@@ -76,7 +76,8 @@ const parsedOptions = checkOptions();
 if (!parsedOptions) {
   console.log(usage);
 } else {
-  createProxy(parsedOptions).then(() => {
-    console.log(`Proxy server started at https://localhost:${parsedOptions.destination}`);
+  createProxy(parsedOptions).then(({ altNames }) => {
+    const hostname = (Array.isArray(altNames)) ? altNames[0] : 'localhost';
+    console.log(`Proxy server started at https://${hostname}:${parsedOptions.destination}`);
   });
 }
