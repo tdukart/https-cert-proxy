@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="@types/http-proxy" level="application" />
     <orderEntry type="library" name="@types/command-line-args" level="application" />
+    <orderEntry type="library" name="@types/http-proxy" level="application" />
   </component>
 </module>
