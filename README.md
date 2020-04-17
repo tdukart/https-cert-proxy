@@ -14,10 +14,11 @@ The `mkcert` package, available on Homebrew, is very easy to use.
 1. Ensure you have [Homebrew](https://brew.sh) installed.
 2. Run `brew install mkcert nss`. `mkcert` will create the certificate. `nss` will get Firefox to
    recognize it. (Other browsers will recognize it automatically.)
-3. Change to the directory where you'd like to save the certificates. I recommend a `/certificates`
+3. Run `mkcert -install` to generate your local CA.
+4. Change to the directory where you'd like to save the certificates. I recommend a `/certificates`
    directory in your project.
-4. Run `mkcert localhost`.
-5. Ensure that the two generated files, `localhost.pem` and `localhost-key.pem`, are ignored in your
+5. Run `mkcert localhost`.
+6. Ensure that the two generated files, `localhost.pem` and `localhost-key.pem`, are ignored in your
    source control. They would only be trusted on your local machine, so other users would run into
    errors.
 
