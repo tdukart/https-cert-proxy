@@ -9,26 +9,28 @@ const optionDefinitions = [
     name: 'source',
     alias: 's',
     type: Number,
-    defaultValue: 3000,
+    defaultValue: process.env.HCP_SOURCE || 3000,
     description: 'The port your local project is listening on. For Node development, this is likely 3000.',
   },
   {
     name: 'destination',
     alias: 'd',
     type: Number,
-    defaultValue: 8030,
+    defaultValue: process.env.HCP_DESTINATION || 8030,
     description: 'The port to proxy from.',
   },
   {
     name: 'cert',
     alias: 'c',
     type: String,
+    defaultValue: process.env.HCP_CERTFILE,
     description: 'The certificate file to use.',
   },
   {
     name: 'key',
     alias: 'k',
     type: String,
+    defaultValue: process.env.HCP_KEYFILE,
     description: 'The certificate key file to use.',
   },
   {
@@ -78,6 +80,8 @@ if (!parsedOptions) {
 } else {
   createProxy(parsedOptions).then(({ altNames }) => {
     const hostname = (Array.isArray(altNames)) ? altNames[0] : 'localhost';
+    console.log(`Listening to localhost:${parsedOptions.source}`);
+    console.log(`Using certificate file ${parsedOptions.cert} and key file ${parsedOptions.key}`);
     console.log(`Proxy server started at https://${hostname}:${parsedOptions.destination}`);
   });
 }
