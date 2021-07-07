@@ -1,5 +1,5 @@
 const httpProxy = require('http-proxy');
-const x509 = require('x509');
+const x509 = require('x509.js');
 const fs = require('fs');
 
 const createProxy = ({
@@ -8,7 +8,7 @@ const createProxy = ({
   cert,
   key,
 }) => new Promise((resolve) => {
-  const altNames = x509.getAltNames(cert);
+  const { altNames } = x509.parseCert(fs.readFileSync(cert));
   httpProxy.createServer({
     target: {
       host: 'localhost',
