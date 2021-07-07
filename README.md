@@ -64,6 +64,21 @@ I find it easiest to have these scripts in my `package.json`, using the package 
 }
 ```
 
+## Configuring with environment variables
+
+If you often run with the same settings, you can set up environment variables in addition to using
+the command-line options. The variables are as follows:
+
+| Variable          | Setting              |
+|-------------------|----------------------|
+| `HCP_SOURCE`      | Source port          |
+| `HCP_DESTINATION` | Destination port     |
+| `HCP_CERTFILE`    | The certificate file |
+| `HCP_KEYFILE`     | The key file         |
+
+If you set the `HCP_CERTFILE` and `HCP_KEYFILE` variables, you do not need to use the `--cert` and
+`--key` command-line options.
+
 ## Copyright/License
 
-Copyright (c) 2020 Todd Dukart. Licensed under the BSD-3-Clause.
+Copyright (c) 2020-21 Todd Dukart. Licensed under the BSD-3-Clause.
