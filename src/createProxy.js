@@ -1,6 +1,7 @@
+/* eslint-disable n/no-sync */
 const httpProxy = require('http-proxy');
 const x509 = require('x509.js');
-const fs = require('fs');
+const fs = require('node:fs');
 
 const createProxy = ({
   source,
